@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I3O GESTÃO HUB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --azul-i3o: #0D47A1;
+            --laranja-i3o: #EF6C00;
+            --azul-claro: #1976D2;
+            --fundo: #F5F5F5;
+            --branco: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--fundo);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Barra de Topo */
+        header {
+            width: 100%;
+            background-color: var(--azul-i3o);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        /* Logo */
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+
+        /* Estilo dos Botões (Cards) */
+        .menu-button {
+            display: flex;
+            align-items: center;
+            background-color: var(--branco);
+            text-decoration: none;
+            color: #333;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .menu-button:active {
+            transform: scale(0.98);
+        }
+
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.5rem;
+        }
+
+        .btn-assistencia .icon-circle {
+            background-color: rgba(239, 108, 0, 0.1);
+            color: var(--laranja-i3o);
+        }
+
+        .btn-ponto .icon-circle {
+            background-color: rgba(25, 118, 210, 0.1);
+            color: var(--azul-claro);
+        }
+
+        .button-text {
+            flex-grow: 1;
+            text-align: left;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .arrow {
+            color: #CCC;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: auto;
+            padding-bottom: 30px;
+            color: #888;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>I3O GESTÃO HUB</header>
+
+    <div class="container">
+        <img src="i3ologo.jpg" alt="I3O Logo" class="logo" onerror="this.src='https://via.placeholder.com/150?text=I3O+LOGOTIPO'">
+
+        <a href="https://fichadeassistenciav10.vercel.app/" class="menu-button btn-assistencia">
+            <div class="icon-circle">
+                <i class="fa-solid fa-file-signature"></i>
+            </div>
+            <div class="button-text">FICHA DE ASSISTÊNCIA TÉCNICA</div>
+            <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <a href="https://picar-ten.vercel.app/" class="menu-button btn-ponto">
+            <div class="icon-circle">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="button-text">PICAR PONTO</div>
+            <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+    </div>
+
+    <footer>
+        I3O - Soluções Integradas<br>
+        Web App Versão 1.2.0
+    </footer>
+
+</body>
+</html>
