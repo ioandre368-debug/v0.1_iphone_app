@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I3O GESTÃO HUB</title>
+    
+    <link rel="icon" type="image/x-icon" href="i3o.ico">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
             --azul-i3o: #0D47A1;
             --laranja-i3o: #EF6C00;
             --azul-claro: #1976D2;
+            --verde-stock: #2E7D32;
+            --roxo-catalogos: #6A1B9A;
+            --vermelho-videos: #C62828;
+            --navy-fotos: #37474F;
+            --teal-manual: #00695C;
             --fundo: #F5F5F5;
             --branco: #FFFFFF;
         }
@@ -24,7 +33,6 @@
             min-height: 100vh;
         }
 
-        /* Barra de Topo */
         header {
             width: 100%;
             background-color: var(--azul-i3o);
@@ -35,79 +43,79 @@
             font-size: 1.2rem;
             letter-spacing: 1px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .container {
             width: 90%;
-            max-width: 400px;
+            max-width: 450px;
             text-align: center;
-            padding-top: 40px;
+            padding: 30px 0;
         }
 
-        /* Logo */
         .logo {
-            width: 150px;
+            width: 140px;
             height: auto;
-            margin-bottom: 40px;
-            border-radius: 10px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        /* Estilo dos Botões (Cards) */
         .menu-button {
             display: flex;
             align-items: center;
             background-color: var(--branco);
             text-decoration: none;
             color: #333;
-            padding: 20px;
-            margin-bottom: 20px;
+            padding: 18px;
+            margin-bottom: 15px;
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+            border: 1px solid rgba(0,0,0,0.03);
         }
 
         .menu-button:active {
-            transform: scale(0.98);
+            transform: scale(0.97);
+            background-color: #f9f9f9;
         }
 
         .icon-circle {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 20px;
-            font-size: 1.5rem;
+            margin-right: 15px;
+            font-size: 1.3rem;
         }
 
-        .btn-assistencia .icon-circle {
-            background-color: rgba(239, 108, 0, 0.1);
-            color: var(--laranja-i3o);
-        }
-
-        .btn-ponto .icon-circle {
-            background-color: rgba(25, 118, 210, 0.1);
-            color: var(--azul-claro);
-        }
+        .btn-assistencia .icon-circle { background-color: rgba(239, 108, 0, 0.1); color: var(--laranja-i3o); }
+        .btn-ponto .icon-circle { background-color: rgba(25, 118, 210, 0.1); color: var(--azul-claro); }
+        .btn-stock .icon-circle { background-color: rgba(46, 125, 50, 0.1); color: var(--verde-stock); }
+        .btn-catalogos .icon-circle { background-color: rgba(106, 27, 154, 0.1); color: var(--roxo-catalogos); }
+        .btn-videos .icon-circle { background-color: rgba(198, 40, 40, 0.1); color: var(--vermelho-videos); }
+        .btn-fotos .icon-circle { background-color: rgba(55, 71, 79, 0.1); color: var(--navy-fotos); }
+        .btn-manual .icon-circle { background-color: rgba(0, 105, 92, 0.1); color: var(--teal-manual); }
 
         .button-text {
             flex-grow: 1;
             text-align: left;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
-        .arrow {
-            color: #CCC;
-        }
+        .arrow { color: #DDD; font-size: 0.8rem; }
 
-        /* Rodapé */
         footer {
             margin-top: auto;
-            padding-bottom: 30px;
-            color: #888;
-            font-size: 0.8rem;
+            padding: 20px 0;
+            color: #999;
+            font-size: 0.75rem;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -119,25 +127,51 @@
         <img src="i3ologo.jpg" alt="I3O Logo" class="logo" onerror="this.src='https://via.placeholder.com/150?text=I3O+LOGOTIPO'">
 
         <a href="https://fichadeassistenciav10.vercel.app/" class="menu-button btn-assistencia">
-            <div class="icon-circle">
-                <i class="fa-solid fa-file-signature"></i>
-            </div>
+            <div class="icon-circle"><i class="fa-solid fa-file-contract"></i></div>
             <div class="button-text">FICHA DE ASSISTÊNCIA TÉCNICA</div>
             <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
         </a>
 
         <a href="https://picar-ten.vercel.app/" class="menu-button btn-ponto">
-            <div class="icon-circle">
-                <i class="fa-solid fa-clock"></i>
-            </div>
+            <div class="icon-circle"><i class="fa-solid fa-user-clock"></i></div>
             <div class="button-text">PICAR PONTO</div>
+            <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/1ciRHUXFyY8k89jDQYWa4KnZswcw31J31?usp=sharing" target="_blank" class="menu-button btn-stock">
+            <div class="icon-circle"><i class="fa-solid fa-boxes-stacked"></i></div>
+            <div class="button-text">STOCK I3O</div>
+            <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/1psnESrFFPttb9kuHqnDR7S8SJVSugeaC?usp=sharing" target="_blank" class="menu-button btn-catalogos">
+            <div class="icon-circle"><i class="fa-solid fa-book-open"></i></div>
+            <div class="button-text">CATÁLOGO DE EQUIPAMENTOS</div>
+            <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/1fpjTlB2ntSa0nPbsy6GlYllR3jI98k0a?usp=sharing" target="_blank" class="menu-button btn-videos">
+            <div class="icon-circle"><i class="fa-solid fa-video"></i></div>
+            <div class="button-text">VÍDEOS - TUTORIAIS</div>
+            <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/1dTY4D5vaWbHM2sYJ2S_rNc2Vntd0hKBD?usp=sharing" target="_blank" class="menu-button btn-fotos">
+            <div class="icon-circle"><i class="fa-solid fa-camera"></i></div>
+            <div class="button-text">FOTOS EQUIPAMENTOS</div>
+            <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/1CilASBUb-f4XG_JHvhxzlVmwXD3sTjRe?usp=sharing" target="_blank" class="menu-button btn-manual">
+            <div class="icon-circle"><i class="fa-solid fa-book"></i></div>
+            <div class="button-text">MANUAL EQUIPAMENTOS</div>
             <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
         </a>
     </div>
 
     <footer>
         I3O - Soluções Integradas<br>
-        Web App Versão 1.2.0
+        Portal de Gestão v1.5.2
     </footer>
 
 </body>
