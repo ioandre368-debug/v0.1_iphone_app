@@ -16,7 +16,7 @@
     
     <style>
         :root {
-            --azul-i3o: #0066ff;
+            --azul-i3o: #0D47A1;
             --laranja-i3o: #EF6C00;
             --azul-claro: #1976D2;
             --verde-stock: #2E7D32;
@@ -24,6 +24,7 @@
             --vermelho-videos: #C62828;
             --navy-fotos: #37474F;
             --teal-manual: #00695C;
+            --dark-manual: #263238; /* Cor para Manuais Técnicos */
             --fundo: #F5F5F5;
             --branco: #FFFFFF;
         }
@@ -105,6 +106,7 @@
         .btn-catalogos .icon-circle { background-color: rgba(106, 27, 154, 0.1); color: var(--roxo-catalogos); }
         .btn-fotos .icon-circle { background-color: rgba(55, 71, 79, 0.1); color: var(--navy-fotos); }
         .btn-manual .icon-circle { background-color: rgba(0, 105, 92, 0.1); color: var(--teal-manual); }
+        .btn-tecnico .icon-circle { background-color: rgba(38, 50, 56, 0.1); color: var(--dark-manual); }
         .btn-videos .icon-circle { background-color: rgba(198, 40, 40, 0.1); color: var(--vermelho-videos); }
         .btn-assistencia .icon-circle { background-color: rgba(239, 108, 0, 0.1); color: var(--laranja-i3o); }
 
@@ -164,6 +166,12 @@
             <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
         </a>
 
+        <a href="https://drive.google.com/drive/folders/14qzaCAb1uNeypx8_DnQ_XzRYP3Ob1rbe?usp=sharing" target="_blank" class="menu-button btn-tecnico">
+            <div class="icon-circle"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <div class="button-text">MANUAIS TÉCNICOS</div>
+            <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
         <a href="https://drive.google.com/drive/folders/1fpjTlB2ntSa0nPbsy6GlYllR3jI98k0a?usp=sharing" target="_blank" class="menu-button btn-videos">
             <div class="icon-circle"><i class="fa-solid fa-video"></i></div>
             <div class="button-text">VÍDEOS - TUTORIAIS</div>
@@ -180,7 +188,7 @@
 
     <footer>
         I3O - Soluções Integradas<br>
-        Portal de Gestão v1.6.0
+        Portal de Gestão v1.7.0
     </footer>
 
 </body>
